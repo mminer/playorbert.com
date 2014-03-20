@@ -1,8 +1,0 @@
-{
-    "name": "orbert",
-    "version": "1.0.0",
-    "devDependencies": {
-        "grunt": "~0.4.4",
-        "grunt-contrib-less": "~0.10.0"
-    }
-}

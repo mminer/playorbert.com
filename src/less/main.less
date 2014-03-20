@@ -1,0 +1,131 @@
+.translateZ(@z) {
+    -webkit-transform: translateZ(@z);
+    -ms-transform: translateZ(@z);
+    transform: translateZ(@z);
+}
+
+@-webkit-keyframes wobble-vertical {
+    16.65% {
+        .translate(0, 8px);
+    }
+
+    33.3% {
+        .translate(0, -6px);
+    }
+
+    49.95% {
+        .translate(0, 4px);
+    }
+
+    66.6% {
+        .translate(0, -2px);
+    }
+
+    83.25% {
+        .translate(0, 1px);
+    }
+
+    100% {
+        .translate(0, 0);
+    }
+}
+
+@blue: #01B0F0;
+@green: #AEEE00;
+
+.heading {
+    font-family: 'Outage';
+    text-transform: uppercase;
+}
+
+body {
+    background-color: @green;
+    color: white;
+}
+
+header {
+    background-color: @blue;
+    display: table;
+
+    [class*='col-'] {
+        display: table-cell;
+        float: none;
+    }
+
+    .hero {
+        vertical-align: bottom;
+
+        img {
+            margin-top: 5%;
+            width: 100%;
+
+            @media (max-width: @screen-sm) {
+                display: none;
+            }
+        }
+    }
+
+    .info {
+        padding: 30px 40px 30px 0;
+        vertical-align: middle;
+
+        h2 {
+            font-size: 40px;
+            margin-top: 0;
+            .heading;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .video {
+            margin: 20px 0;
+        }
+    }
+}
+
+#download-links {
+    padding: 20px;
+    text-align: center;
+
+    img {
+        height: 60px;
+        margin: 10px;
+        .translateZ(0);
+    }
+
+    a:hover img {
+        .animation-name(wobble-vertical);
+        .animation-duration(1s);
+        .animation-timing-function(ease-in-out);
+        .animation-iteration-count(1);
+    }
+
+}
+
+footer {
+    font-size: 30px;
+    line-height: 1;
+    padding-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    .heading;
+
+    a {
+        border-bottom: 5px solid transparent;
+        color: @blue;
+
+        .translateZ(0);
+        .transition-duration(0.3s);
+        .transition-property(border-bottom-color);
+
+        &:hover {
+            border-bottom-color: @blue;
+            color: @blue;
+            text-decoration: none;
+        }
+    }
+}

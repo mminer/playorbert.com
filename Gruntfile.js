@@ -7,8 +7,8 @@ module.exports = function(grunt) {
                 compress: true
             },
             dist: {
-                src: ['src/less/<%= pkg.name %>.less'],
-                dest: 'src/css/<%= pkg.name %>.css'
+                src: ['less/<%= pkg.name %>.less'],
+                dest: 'css/<%= pkg.name %>.css'
             }
         }
     });

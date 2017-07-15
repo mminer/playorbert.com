@@ -1667,7 +1667,7 @@ header .info {
     padding: 30px 40px 30px 0;
     vertical-align: middle
 }
-header .info h2 {
+header .info h2, #download-links h2 {
     font-size: 40px;
     margin-top: 0;
     font-family: 'Outage';
@@ -1683,7 +1683,8 @@ header .info .video {
 }
 #download-links {
     padding: 20px;
-    text-align: center
+    text-align: center;
+    margin-bottom: 15px;
 }
 #download-links img {
     width: 200px;
@@ -1744,6 +1745,24 @@ footer a:hover {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+#replays {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+#replays a {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+}
+#replays img {
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin: 0 auto;
 }
 
 @media all and (max-width: 600px)  {
